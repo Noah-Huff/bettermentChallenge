@@ -4,6 +4,7 @@
     --primary-tan: #e3c59c;
     --primary-green: #26551d;
     --dark-green: #175237;
+    --light-green: #c9e4ca;
 
 }
 
@@ -15,6 +16,7 @@
 
 body {
     font-family: Nunito, sans-serif;
+    background-color: var(--primary-grey);
 }
 .container {
     max-width: 1000px;
@@ -84,15 +86,15 @@ a{
     grid-template-columns: 60% 40%;
 }
 .showcase {
-    height: 350px;
+    height: 460px;
     /* background-color: var(--primary-green); */
     color: #fff;
 }
 .login {
     height: 310px;
     width: 350px;
-    grid-column: 2;
-    grid-row: 1;
+    /* grid-column: 2; */
+    /* grid-row: 1; */
 }
 .login .form {
     margin-top: 15px;
@@ -100,6 +102,9 @@ a{
 .showcase-text {
     justify-content: center;
     align-self: center;
+}
+.form .btn {
+    border: solid white 1px;
 }
 
 /* index info-text */
@@ -123,6 +128,27 @@ a{
     box-shadow: 0 2px 5px rgba(255, 255, 255, .3);
 }
 
+.group-card > *:nth-child(1) {
+    grid-column:  1 / span 3;
+}
+.group-card > *:nth-child(1) {
+    align-items: end;
+}
+.group-button {
+    align-self: end;
+    justify-self: center;
+}
+.group-card {
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+.leaderboard-table {
+    border-top: solid white 1px;
+}
+.group-table {
+    border-top: solid white 1px;
+}
+
 /* track */
 .track-inspiration {
     background-color: var(--primary-grey);
@@ -131,22 +157,147 @@ a{
 }
 .slider-label {
     /* display: inline; */
-    align-self: start;
-    justify-self: start;
+    /* align-self: start; */
+    /* justify-self: start; */
+    position: relative;
+    color: white;
 }
 .switch {
     align-self: end;
     justify-self: end;
 }
+.track-slider {
+    align-self: center;
+    justify-self: left;
+}
+/* .track-grid > *:first-child {
+    grid-column: 1 / 3;
+} */
+.track-grid > *:last-child {
+    grid-column: 1;
+}
+.track {
+    margin-top: 15px;
+}
 
 /* footer */
 .footer-links {
     color: black;
-    align-self: end;
     justify-self: end;
 }
 .footer-copy {
     justify-self: start;
-    align-self: start;
+}
+footer {
+    background-color: white;
+}
+
+
+
+/* Tablets and under */
+@media(max-width: 1050px) {
+    .container {
+        max-width: 718px;
+        margin: 0 auto;
+    }
+    .grid-2 {
+        grid-gap: 15px;
+    }
+    .showcase .grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 768px) {
+    .showcase .grid-2,
+    .grid-2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-self: center;
+        align-self: center;   
+     }
+     /* current page */
+     .grid-3,
+     .group-card {
+         display: block;
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+     }
+     /* .grid-4, 
+     .grid-4 .track-grid,
+     .track-grid {
+         grid-template-columns: 1fr 1fr;
+     }
+     .track-grid > *:first-child(1) {
+        grid-column: 1 / span 2;
+    }
+    .track-grid > *:last-child {
+        grid-column: 1;
+    } */
+     table {
+         margin-left: auto;
+         margin-right: auto;
+         padding-top: 5px;
+         margin-top: 10px;
+     }
+     p,
+     .leaderboard-header {
+         text-align: center;
+     }
+     .group-button,
+     .record,
+     .btn,
+     .group {
+         margin: auto;
+         display: grid;
+         margin-top: 8px;
+         width: 100%;
+     }
+     .center {
+         margin: auto;
+         /* display:grid; */
+     }
+    
+     .card {
+         justify-self: center;
+         margin: 15px
+     }
+     .showcase {
+         height: 480px;
+     }
+     .blurred-picture,
+     .showcase {
+        background: url(/images/blurredBackground.png) no-repeat fixed;
+        background-size: cover;
+        object-fit: cover;
+        /* background-position: 75% 0%; */
+     }
+    .background-picture,
+    .showcase {
+        background: url(/images/bettermentChallengeBackground.png) no-repeat fixed;
+        background-size: cover;
+        object-fit: cover;
+        /* background-position: 75% 0%; */
+    }
+    .footer > *:nth-child(1) {
+        grid-row: 2;
+    }
+    .footer-links,
+    .footer-copy {
+        justify-self: center;
+        margin: auto;
+    }
+
+
+}
+
+
+/* Mobile */
+@media(max-width: 500px) {
+
+
+
+
 }
 

@@ -20,34 +20,59 @@
         <div class="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="track.html">Track</a></li>
+                <!-- <li><a href="track.html">Track</a></li> -->
                 <li><a href="current.html">Current</a></li>
                 <li><a href="create.html">Create New</a></li>
-                <li><a href="modify.html">Modify</a></li>
+                <!-- <li><a href="modify.html">Modify</a></li> -->
             </ul>
         </div>
     </div>
 </div>
 
 <!-- Form -->
-<div class="track card container blurred-picture">
-    <div class="container grid-2 track-header">
-        <h2>Track Your Daily Progress</h2>
-        <div class="form btn">Record</div>
+
+
+<section class="blurred-picture card container">
+    <h2 class="track-header">Track Your Daily Progress</h2>
+    <div class="grid-4 track-grid">
+        <div class="">
+            <div class="slider-label">Ride your bike</div>
+            <label class="switch track-slider" name="first">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="">
+            <div class="slider-label">Read a book</div>
+            <label class="switch track-slider" name="first">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="">
+            <div class="slider-label">Go for a run</div>
+            <label class="switch track-slider" name="first">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="">
+            <div class="slider-label">Connect with a friend</div>
+            <label class="switch track-slider" name="first">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="">
+            <div class="slider-label">Area Five</div>
+            <label class="switch track-slider" name="first">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <input type="submit" value="Record" class="track btn sma">
     </div>
-    <br>
-    <form class="grid-4">
-        <label class="switch" name="first">
-            <div class="slider-label">Area One</div>
-            <input type="checkbox">
-            <span class="slider"></span>
-          </label>
-          <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-          </label>
-    </form>
-</div>
+</section>
 
 <br>
 </div><!-- end of container for background-picture -->
